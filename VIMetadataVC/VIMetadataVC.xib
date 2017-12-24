@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VIMetadataVC" customModule="Hooha_M_Dev" customModuleProvider="target">
+            <connections>
+                <outlet property="btnNext" destination="pvc-ZZ-KPg" id="KmL-gj-3We"/>
+                <outlet property="btnPrevious" destination="StU-ko-O6Z" id="Akh-Ly-omh"/>
+                <outlet property="clvMain" destination="Btc-Ql-v3g" id="i9N-IU-lod"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Btc-Ql-v3g">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v8H-Sy-OHH">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StU-ko-O6Z" userLabel="Previous">
+                    <rect key="frame" x="4" y="318.5" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="StU-ko-O6Z" secondAttribute="height" id="0Xq-b9-6hT"/>
+                        <constraint firstAttribute="height" constant="30" id="NSA-Mr-uvU"/>
+                    </constraints>
+                    <state key="normal" image="Previous_Photo"/>
+                    <connections>
+                        <action selector="didPressPreviousButton:" destination="-1" eventType="touchUpInside" id="5uf-Mk-0Iu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvc-ZZ-KPg">
+                    <rect key="frame" x="341" y="318.5" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="pvc-ZZ-KPg" secondAttribute="height" id="lhS-r7-nH2"/>
+                        <constraint firstAttribute="height" constant="30" id="rXt-BC-YQu"/>
+                    </constraints>
+                    <state key="normal" image="Next_Photo"/>
+                    <connections>
+                        <action selector="didPressNextButton:" destination="-1" eventType="touchUpInside" id="kww-Xv-xxf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONP-uW-ib9" userLabel="Back">
+                    <rect key="frame" x="4" y="20" width="40" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="QpJ-JF-bCo"/>
+                        <constraint firstAttribute="height" constant="30" id="p19-1R-AF4"/>
+                    </constraints>
+                    <state key="normal" image="back_arrow_white"/>
+                    <connections>
+                        <action selector="didPressBackButton:" destination="-1" eventType="touchUpInside" id="hGL-cH-bOj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Btc-Ql-v3g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BbR-Xf-3CI"/>
+                <constraint firstItem="ONP-uW-ib9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="J5T-wM-VJt"/>
+                <constraint firstItem="pvc-ZZ-KPg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JUt-8T-ivb"/>
+                <constraint firstItem="ONP-uW-ib9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="4" id="c14-02-hu9"/>
+                <constraint firstAttribute="trailing" secondItem="pvc-ZZ-KPg" secondAttribute="trailing" constant="4" id="iGL-NE-khM"/>
+                <constraint firstAttribute="trailing" secondItem="Btc-Ql-v3g" secondAttribute="trailing" id="lVD-Sy-vJN"/>
+                <constraint firstAttribute="bottom" secondItem="Btc-Ql-v3g" secondAttribute="bottom" id="sjG-yh-GwN"/>
+                <constraint firstItem="StU-ko-O6Z" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="tCn-Tm-1Mz"/>
+                <constraint firstItem="StU-ko-O6Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="4" id="uuw-cj-kWW"/>
+                <constraint firstItem="Btc-Ql-v3g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xxx-LL-eZf"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="Next_Photo" width="17" height="30"/>
+        <image name="Previous_Photo" width="17" height="30"/>
+        <image name="back_arrow_white" width="18" height="14"/>
+    </resources>
+</document>
